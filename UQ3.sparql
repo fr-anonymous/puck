@@ -1,0 +1,4 @@
+PREFIX ns1: <http://example.org/>
+
+SELECT ?x1
+WHERE { (?x1 ns1:p ?y1, ?t1) . FILTER(?t1 > 2011-11-04 00:00:00) }

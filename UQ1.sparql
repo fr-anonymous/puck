@@ -1,0 +1,8 @@
+PREFIX ns1: <http://example.org/>
+
+SELECT ?y
+WHERE { ?y ns1:p ?z . ?z ns1:q ?z }
+
+SELECT ?x ?y
+WHERE { ?x ns1:p ?y . ?y ns1:p ?x }
+

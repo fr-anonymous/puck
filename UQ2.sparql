@@ -1,0 +1,9 @@
+PREFIX ns1: <http://example.org/>
+
+SELECT ?dp ?address
+WHERE { ?dp ns1:address ?address }
+
+SELECT ?address ?city ?street
+WHERE { ?address ns1:street ?street . ?address ns1:city ?city .
+        FILTER(?city = "Grenoble") }
+
