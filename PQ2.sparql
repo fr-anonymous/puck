@@ -1,5 +1,0 @@
-PREFIX ns1:<http://example.org/>
-
-SELECT ?dp ?city
-WHERE { ?dp ns1:address ?address . ?address ns1:street ?street . ?address ns1:city ?city .
-        FILTER(?street > "Alsace-Loraine")}
