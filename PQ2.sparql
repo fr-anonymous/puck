@@ -1,0 +1,9 @@
+PREFIX issda:<http://example.org/>
+
+SELECT ?dp ?y
+WHERE { ?dp issda:associatedOccupier ?o . ?o issda:yearlyIncome ?y } 
+
+
+SELECT ?dp
+WHERE { ?dp issda:associatedOccupier ?o . ?o issda:nbOfPersons ?n . FILTER(?n > 1) }
+

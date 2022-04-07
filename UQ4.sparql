@@ -1,0 +1,9 @@
+PREFIX issda: <http://example.org/>
+
+SELECT  ?timeWindowEnd SUM(?c)
+WHERE {(?dp issda:consumption ?c, ?ts).
+GROUP BY ?timeWindowEnd
+TIMEWINDOW (3, 2)
+
+ 
+

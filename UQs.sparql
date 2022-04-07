@@ -1,0 +1,16 @@
+PREFIX issda: <http://example.org/>
+
+
+SELECT ?o ?y
+WHERE { ?o issda:yearlyIncome ?y . ?o issda:own ?s . FILTER(?y > 50000)}
+
+SELECT ?dp ?o
+WHERE { ?dp issda:associatedOccupier ?o . ?o issda:nbOfPersons ?n . FILTER( ?n = 1)}
+
+SELECT ?timeWindowEnd SUM(?c)
+WHERE {(?dp issda:consumption ?c, ?ts).
+GROUP BY ?timeWindowEnd
+TIMEWINDOW (3, 1)
+
+ 
+
