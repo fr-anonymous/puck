@@ -1,4 +1,0 @@
-PREFIX ns1:<http://example.org/>
-
-SELECT ?x
-WHERE { ?x ns1:p ?y . ?y ns1:p ?z . ?z ns1:q ?u }
